@@ -1,0 +1,23 @@
+<#
+.SYNOPSIS
+A powershell script that creates an inventory of a computer with all the directories and files.
+
+- User specifies the target computer
+- User specifies the starting directory
+- User specifies the output file
+
+
+.DESCRIPTION
+The script collects an inventory of a computer detailing all directories and files.
+
+.PARAMETER targetComputer
+Specifies the computer to create the inventory from
+
+.PARAMETER UserName
+Specifies the administrative username on the target computer
+
+.PARAMETER startDirectory
+Specifies the ditecrory to start the traversal from
+
+.PARAMETER outFile
+Specifies the file to write the results to.
