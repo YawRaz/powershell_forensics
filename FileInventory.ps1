@@ -21,3 +21,24 @@ Specifies the ditecrory to start the traversal from
 
 .PARAMETER outFile
 Specifies the file to write the results to.
+
+
+.EXAMPLE 
+FileInventory ComputerName
+#>
+
+# Parameter Definition Section
+param (
+	[string]$UserName
+	[string]$targetComputer
+	[string]$outFile
+
+# local variable definition
+# Get the current data and time
+$rptDate=Get-Date
+$epoch=([DateTimeOffset]$rptDate).ToUnixTimeSeconds()
+
+# report file creation
+
+# cmdLet Command Line execution
+Invoke-Command -ComputerName $targetComputer -Credential $UserName -ScriptBlock { Get-ChildItem -Path $startDirectory -Recurse -Force }
